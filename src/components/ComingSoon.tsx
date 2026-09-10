@@ -1,6 +1,3 @@
-import { CloudflareLogo } from "@cloudflare/kumo";
-import "@cloudflare/kumo/styles/standalone";
-
 const PLATFORMS = [
 	"Workers",
 	"Workers AI",
@@ -19,7 +16,6 @@ export default function ComingSoon() {
 		<div className="cf-page">
 			<header className="cf-nav">
 				<a className="cf-brand" href="/" aria-label="justusecloudflare.dev home">
-					<CloudflareLogo variant="glyph" color="color" className="cf-cloud" />
 					<span className="cf-wordmark">JUSTUSECLOUDFLARE</span>
 				</a>
 			</header>
@@ -68,8 +64,15 @@ export default function ComingSoon() {
 			</section>
 
 			<footer className="cf-footer">
-				<span>justusecloudflare.dev</span>
-				<span>&copy; 2026</span>
+				<div className="cf-footer-row">
+					<span>justusecloudflare.dev</span>
+					<span>&copy; 2026</span>
+				</div>
+				<p className="cf-disclaimer">
+					justusecloudflare.dev is an independent community project and is not
+					affiliated with or endorsed by Cloudflare, Inc. Cloudflare and related
+					marks are trademarks of Cloudflare, Inc.
+				</p>
 			</footer>
 
 			<style>{`
@@ -93,7 +96,6 @@ export default function ComingSoon() {
 					gap: 0.6rem;
 					text-decoration: none;
 				}
-				.cf-cloud { width: 44px; height: auto; display: block; }
 				.cf-wordmark {
 					color: #fff;
 					font-weight: 800;
@@ -220,12 +222,21 @@ export default function ComingSoon() {
 					border-radius: 999px;
 				}
 				.cf-footer {
-					display: flex;
-					align-items: center;
-					justify-content: space-between;
 					padding: 0.9rem 1.75rem 1.1rem;
 					color: #a8a29e;
 					font-size: 0.82rem;
+				}
+				.cf-footer-row {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+				}
+				.cf-disclaimer {
+					margin: 0.75rem 0 0;
+					font-size: 0.75rem;
+					line-height: 1.5;
+					color: #78716c;
+					max-width: 42rem;
 				}
 				@media (max-width: 860px) {
 					.cf-wordmark { font-size: 0.72rem; }
