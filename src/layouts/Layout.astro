@@ -1,25 +1,29 @@
+---
+const title = 'Just Use Cloudflare — Big ideas. Small stack.';
+const description = 'A community-built case for Cloudflare: global compute, zero-egress object storage, and a connected developer platform. Build more. Manage less.';
+---
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="justusecloudflare.dev — something cool is coming." />
-		<title>justusecloudflare.dev — Something cool is coming</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://justusecloudflare.dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://justusecloudflare.dev/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body><slot /></body>
 </html>
-
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		background: #0b0b0c;
-	}
+  html, body { margin: 0; width: 100%; min-height: 100%; background: #fff; }
 </style>
