@@ -1,5 +1,7 @@
 packages:
   - .
+overrides:
+  'undici@>=8.0.0 <8.12.2': ^8.12.2
 allowBuilds:
   esbuild: true
   workerd: false
